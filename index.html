@@ -5,25 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conectando con Itzi...</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #25D366; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin-bottom: 20px; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .btn { background-color: #25D366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+        body { font-family: -apple-system, system-ui, sans-serif; background-color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; text-align: center; }
+        .card { width: 90%; max-width: 400px; padding: 20px; border-radius: 20px; }
+        .btn { background-color: #25D366; color: white; padding: 18px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 20px; display: inline-block; transition: 0.3s; box-shadow: 0 4px 15px rgba(37,211,102,0.4); }
+        .btn:active { transform: scale(0.95); }
     </style>
 </head>
 <body>
-    <div class="loader"></div>
-    <h2 style="color: #333; margin-bottom: 10px;">Verificando conexión segura...</h2>
-    <p style="color: #666; margin-bottom: 30px;">Espera un momento para abrir WhatsApp</p>
-    
-    <a href="whatsapp://send?phone=50766494976&text=Hola%20Itzi" class="btn">ABRIR CHAT AHORA</a>
-
-    <script>
-        // Intentamos el salto automático después de 2 segundos de "carga"
-        // Esto le da tiempo al navegador de TikTok de "validar" la página
-        setTimeout(function() {
-            window.location.href = "whatsapp://send?phone=50766494976&text=Hola%20Itzi";
-        }, 2500);
-    </script>
+    <div class="card">
+        <h2 style="color: #333;">¡Hola! 👋</h2>
+        <p style="color: #666; font-size: 16px; margin-bottom: 30px;">Toca el botón para iniciar nuestra conversación de seguridad y preparación.</p>
+        
+        <a href="https://api.whatsapp.com/send?phone=50766494976&text=Hola%20Itzi,%20vengo%20de%20TikTok" class="btn">
+            HABLAR POR WHATSAPP
+        </a>
+        
+        <p style="color: #999; font-size: 12px; margin-top: 40px;">Seguridad: Link verificado y protegido.</p>
+    </div>
 </body>
 </html>
