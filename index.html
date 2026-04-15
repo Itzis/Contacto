@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Conectando...</title>
-    <script>
-        window.onload = function() {
-            // Reemplaza el número XXXXXXXX por el tuyo de Panamá
-            var url = "https://api.whatsapp.com/send?phone=50766494976&text=Hola%20Itzi";
-            window.location.replace(url);
-        };
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conectando con Itzi...</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #25D366; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin-bottom: 20px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .btn { background-color: #25D366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+    </style>
 </head>
 <body>
-    <p>Redirigiendo a WhatsApp seguro...</p>
+    <div class="loader"></div>
+    <h2 style="color: #333; margin-bottom: 10px;">Verificando conexión segura...</h2>
+    <p style="color: #666; margin-bottom: 30px;">Espera un momento para abrir WhatsApp</p>
+    
+    <a href="whatsapp://send?phone=50766494976&text=Hola%20Itzi" class="btn">ABRIR CHAT AHORA</a>
+
+    <script>
+        // Intentamos el salto automático después de 2 segundos de "carga"
+        // Esto le da tiempo al navegador de TikTok de "validar" la página
+        setTimeout(function() {
+            window.location.href = "whatsapp://send?phone=50766494976&text=Hola%20Itzi";
+        }, 2500);
+    </script>
 </body>
 </html>
